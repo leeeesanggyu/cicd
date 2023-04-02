@@ -5,6 +5,7 @@ resource "aws_instance" "application" {
   vpc_security_group_ids = [aws_security_group.cicd_sg.id]
   subnet_id = aws_subnet.cicd_subnet.id
   # availability_zone = "ap-northeast-2a"
+  associate_public_ip_address = true
   
   tags = {
     Name = "application"
