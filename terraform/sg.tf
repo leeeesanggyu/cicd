@@ -1,5 +1,6 @@
 resource "aws_security_group" "cicd_sg" {
   name_prefix = "cicd-sg"
+  vpc_id = aws_vpc.cicd_vpc.id
 }
 
 resource "aws_security_group_rule" "cicd_sg_ingress_ssh" {
